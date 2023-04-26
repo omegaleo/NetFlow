@@ -42,6 +42,12 @@ class Program {
 
         // Update the Changelog.md file
         var changelogFilePath = "Changelog.md";
+
+        if (!File.Exists(changelogFilePath))
+        {
+            await File.WriteAllTextAsync(changelogFilePath, "");
+        }
+        
         var currentChangelog = File.ReadAllText(changelogFilePath);
         currentChangelog = currentChangelog.Replace("# Changelog", $"# Changelog\n\n## {release.Name} ({release.CreatedAt.ToLocalTime():yyyy-MM-dd})");
         currentChangelog = currentChangelog.Insert(currentChangelog.IndexOf("## [Unreleased]"), changelog);
