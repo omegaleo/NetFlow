@@ -1,3 +1,6 @@
+## v0.0.6-rc
+Fix for getting the commits
+
 ## v0.0.5-rc
 
 ## 
