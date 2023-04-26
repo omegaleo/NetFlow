@@ -28,15 +28,12 @@ class Program {
                                      .ToList();
 
         // Generate the changelog
-        var changelog = "# Changelog\n\n";
+        var changelog = "## {release.Name}" + Environment.NewLine;
         foreach (var commit in filteredCommits) {
             var commitMessage = commit.Commit.Message.Trim();
-            if (commitMessage.StartsWith("feat") || commitMessage.StartsWith("fix") || commitMessage.StartsWith("perf") || commitMessage.StartsWith("docs") || commitMessage.StartsWith("refactor") || commitMessage.StartsWith("test") || commitMessage.StartsWith("build") || commitMessage.StartsWith("ci") || commitMessage.StartsWith("chore")) {
-                var match = Regex.Match(commitMessage, @"(\bfeat\b|\bfix\b|\bperf\b|\bdocs\b|\brefactor\b|\btest\b|\bbuild\b|\bci\b|\bchore\b)(\([^\)]+\))?:\s*(.+)");
-                var type = match.Groups[1].Value;
-                var scope = match.Groups[2].Value.Trim('(', ')');
-                var message = match.Groups[3].Value;
-                changelog += $"- **{type}**({scope}): {message}\n";
+            if (Regex.IsMatch(commitMessage, "^(Fix|Implemented|Added|Removed|Changed|Modified)"))
+            {
+                changelog += commitMessage + Environment.NewLine;
             }
         }
 
@@ -50,16 +47,7 @@ class Program {
         
         var currentChangelog = File.ReadAllText(changelogFilePath);
 
-        var unreleasedIndex = currentChangelog.IndexOf("## [Unreleased]");
-
-        if (unreleasedIndex < 0)
-        {
-            currentChangelog += $"{Environment.NewLine}## [Unreleased]";
-            unreleasedIndex = currentChangelog.IndexOf("## [Unreleased]");
-        }
-        
-        currentChangelog = currentChangelog.Replace("# Changelog", $"# Changelog\n\n## {release.Name} ({release.CreatedAt.ToLocalTime():yyyy-MM-dd})");
-        currentChangelog = currentChangelog.Insert(unreleasedIndex, changelog);
+        currentChangelog = $"{changelog}{Environment.NewLine}{currentChangelog}";
         File.WriteAllText(changelogFilePath, currentChangelog);
 
         // Update the release notes
