@@ -19,6 +19,6 @@ jobs:
           dotnet-version: '7.0.x'
 
       - name: Build and run C# program
-        run: dotnet run --project "./auto-tag/UnityFlow.AutoTag/UnityFlow.AutoTag.csproj" ${{ github.event.repository.owner }} ${{ github.event.repository.name }} ${{ github.event.issue.number }}
+        run: dotnet run --project "./auto-tag/UnityFlow.AutoTag/UnityFlow.AutoTag.csproj" ${{ github.event.repository.owner.login }} ${{ github.event.repository.name }} ${{ github.event.issue.number }}
         env:
           UNITYFLOW_SECRET: ${{ secrets.UNITYFLOW_SECRET }}
