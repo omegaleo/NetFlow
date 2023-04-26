@@ -1,5 +1,11 @@
-const { context, getOctokit } = require('@actions/github');
-const octokit = getOctokit(process.env.UNITYFLOW_SECRET);
+const { context} = require('@actions/github');
+
+const { Octokit } = require('@octokit/core');
+const { addLabels } = require('@octokit/rest');
+
+const octokit = new Octokit({
+  auth: process.env.UNITYFLOW_SECRET
+});
 const issueNumber = context.payload.issue.number;
 const issueTitle = context.payload.issue.title;
 const issueBody = context.payload.issue.body;
