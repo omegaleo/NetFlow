@@ -14,4 +14,4 @@ jobs:
       - name: Auto-tag issue or pull request
         env:
           GITHUB_TOKEN: ${{ secrets.UNITYFLOW_SECRET }}
-        run: node auto-tag.js
+        run: node helpers/auto-tag.js
