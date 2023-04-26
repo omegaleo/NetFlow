@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VYs73aS6GmGuY5vljF8Or69Uw2TLH+DlKiEA5Qu88OjlUwseHn7F5RlDe1fDDwnZPWReFvctVrVZS6+klgplnw==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\UnityFlow\\auto-tag\\UnityFlow.AutoTag\\UnityFlow.AutoTag.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\OmegaLeo\\.nuget\\packages\\octokit\\5.0.4\\octokit.5.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

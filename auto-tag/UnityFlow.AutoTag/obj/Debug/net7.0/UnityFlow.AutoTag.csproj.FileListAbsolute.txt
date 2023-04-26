@@ -1,0 +1,17 @@
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\bin\Debug\net7.0\UnityFlow.AutoTag.exe
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\bin\Debug\net7.0\UnityFlow.AutoTag.deps.json
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\bin\Debug\net7.0\UnityFlow.AutoTag.runtimeconfig.json
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\bin\Debug\net7.0\UnityFlow.AutoTag.dll
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\bin\Debug\net7.0\UnityFlow.AutoTag.pdb
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\bin\Debug\net7.0\Octokit.dll
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.csproj.AssemblyReference.cache
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.AssemblyInfoInputs.cache
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.AssemblyInfo.cs
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.csproj.CoreCompileInputs.cache
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.csproj.CopyComplete
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.dll
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\refint\UnityFlow.AutoTag.dll
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.pdb
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.genruntimeconfig.cache
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\ref\UnityFlow.AutoTag.dll

@@ -1,4 +1,4 @@
-name: Auto-Tag Issues and Pull Requests
+name: Tag Issues and Pull Requests
 
 on:
   issues:
@@ -7,15 +7,18 @@ on:
     types: [opened, edited]
 
 jobs:
-  auto-tag:
+  tag-issues:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
-      - name: Auto-tag issue or pull request
-        env:
-          UNITYFLOW_SECRET: ${{ secrets.UNITYFLOW_SECRET }}
-        run: |
-          cd auto-tag && \
-          npm install && \
-          npm run start
 
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '7.0.x'
+
+      - name: Build and run C# program
+        run: dotnet run --project ./path/to/program.csproj
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.UNITYFLOW_SECRET }}
