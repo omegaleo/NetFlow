@@ -6,8 +6,8 @@ using Octokit;
 
 class Program {
     static async Task Main(string[] args) {
-        var client = new GitHubClient(new ProductHeaderValue("my-awesome-app"));
-        var tokenAuth = new Credentials(Environment.GetEnvironmentVariable("GITHUB_ACCESS_TOKEN"));
+        var client = new GitHubClient(new ProductHeaderValue("unityflow"));
+        var tokenAuth = new Credentials(Environment.GetEnvironmentVariable("UNITYFLOW_SECRET"));
         client.Credentials = tokenAuth;
 
         var releaseTag = args[0]; // e.g. "v1.0.0"
