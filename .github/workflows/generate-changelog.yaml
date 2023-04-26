@@ -9,7 +9,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        ref: ${{ github.ref }}
+        ref: ${{ github.head_ref }}
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
@@ -25,5 +25,5 @@ jobs:
         git add Changelog.md
         git commit -m "Auto-generated changelog for release ${{ github.event.release.tag_name }}"
         git push origin HEAD:${{ github.ref }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.UNITYFLOW_SECRET }}
+      with:
+        token: ${{ secrets.UNITYFLOW_SECRET }}
