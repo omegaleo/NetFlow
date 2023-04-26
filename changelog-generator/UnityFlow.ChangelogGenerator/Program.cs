@@ -28,7 +28,7 @@ class Program {
                                      .ToList();
 
         // Generate the changelog
-        var changelog = "## {release.Name}" + Environment.NewLine;
+        var changelog = $"## {release.Name}{Environment.NewLine}";
         foreach (var commit in filteredCommits) {
             var commitMessage = commit.Commit.Message.Trim();
             if (Regex.IsMatch(commitMessage, "^(Fix|Implemented|Added|Removed|Changed|Modified)"))
