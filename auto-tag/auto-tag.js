@@ -13,10 +13,8 @@ const isFeature = /@feature/gi.test(issueBody) || /@feature/gi.test(issueTitle);
 const isBug = /@bug/gi.test(issueBody) || /@bug/gi.test(issueTitle);
 const isEnhancement = /@enhancement/gi.test(issueBody) || /@enhancement/gi.test(issueTitle);
 
-console.log(JSON.stringify(octokit.issues));
-
 if (isFeature) {
-  octokit.issues.addLabels({
+  addLabels({
     owner: context.repo.owner,
     repo: context.repo.repo,
     issue_number: issueNumber,
@@ -24,7 +22,7 @@ if (isFeature) {
   });
 }
 if (isBug) {
-  octokit.issues.addLabels({
+  addLabels({
     owner: context.repo.owner,
     repo: context.repo.repo,
     issue_number: issueNumber,
@@ -32,7 +30,7 @@ if (isBug) {
   });
 }
 if (isEnhancement) {
-  octokit.issues.addLabels({
+  addLabels({
     owner: context.repo.owner,
     repo: context.repo.repo,
     issue_number: issueNumber,
