@@ -6,7 +6,9 @@ class Program {
         var tokenAuth = new Credentials(Environment.GetEnvironmentVariable("UNITYFLOW_SECRET"));
         client.Credentials = tokenAuth;
 
-        var issueNumber = int.Parse(args[0]);
+        var owner = args[0];
+        var repo = args[1];
+        var issueNumber = int.Parse(args[2]);
         var issue = await client.Issue.Get("OWNER", "REPO", issueNumber);
         var issueUpdate = new IssueUpdate();
 
@@ -22,7 +24,7 @@ class Program {
             issueUpdate.AddLabel("enhancement");
         }
 
-        var updatedIssue = await client.Issue.Update("OWNER", "REPO", issueNumber, issueUpdate);
-        Console.WriteLine(updatedIssue.Number);
+        var updatedIssue = await client.Issue.Update(owner, repo, issueNumber, issueUpdate);
+        Console.WriteLine($"Successfully tagged Issue #{updatedIssue.Number}");
     }
 }
