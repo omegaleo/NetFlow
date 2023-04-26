@@ -19,6 +19,6 @@ jobs:
           dotnet-version: '7.0.x'
 
       - name: Build and run C# program
-        run: dotnet run --project ./path/to/program.csproj
+        run: dotnet run --project ./auto-tag/UnityFlow.AutoTag/UnityFlow.AutoTag.csproj
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.UNITYFLOW_SECRET }}
