@@ -49,8 +49,17 @@ class Program {
         }
         
         var currentChangelog = File.ReadAllText(changelogFilePath);
+
+        var unreleasedIndex = currentChangelog.IndexOf("## [Unreleased]");
+
+        if (unreleasedIndex < 0)
+        {
+            currentChangelog += $"{Environment.NewLine}## [Unreleased]";
+            unreleasedIndex = currentChangelog.IndexOf("## [Unreleased]");
+        }
+        
         currentChangelog = currentChangelog.Replace("# Changelog", $"# Changelog\n\n## {release.Name} ({release.CreatedAt.ToLocalTime():yyyy-MM-dd})");
-        currentChangelog = currentChangelog.Insert(currentChangelog.IndexOf("## [Unreleased]"), changelog);
+        currentChangelog = currentChangelog.Insert(unreleasedIndex, changelog);
         File.WriteAllText(changelogFilePath, currentChangelog);
 
         // Update the release notes
