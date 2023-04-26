@@ -6,12 +6,6 @@ on:
   pull_request:
     types: [opened, edited]
 
-inputs:
-  issue-number:
-    description: 'The number of the issue to tag'
-    required: true
-    default: ${{ github.event.issue.number }}
-
 jobs:
   tag-issues:
     runs-on: ubuntu-latest
