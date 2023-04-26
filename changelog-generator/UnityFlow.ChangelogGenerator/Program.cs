@@ -45,15 +45,17 @@ class Program {
             await File.WriteAllTextAsync(changelogFilePath, "");
         }
         
+        // Update the release notes
+        var update = new ReleaseUpdate {
+            Body = changelog
+        };
+        var updatedRelease = await client.Repository.Release.Edit(owner, repo, release.Id, update);
+        
+        
         var currentChangelog = File.ReadAllText(changelogFilePath);
 
         currentChangelog = $"{changelog}{Environment.NewLine}{currentChangelog}";
         File.WriteAllText(changelogFilePath, currentChangelog);
 
-        // Update the release notes
-        var update = new ReleaseUpdate {
-            Body = currentChangelog
-        };
-        var updatedRelease = await client.Repository.Release.Edit(owner, repo, release.Id, update);
     }
 }
