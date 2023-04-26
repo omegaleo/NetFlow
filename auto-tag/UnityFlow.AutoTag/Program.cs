@@ -9,7 +9,7 @@ class Program {
         var owner = args[0];
         var repo = args[1];
         var issueNumber = int.Parse(args[2]);
-        var issue = await client.Issue.Get("OWNER", "REPO", issueNumber);
+        var issue = await client.Issue.Get(owner, repo, issueNumber);
         var issueUpdate = new IssueUpdate();
 
         if (issue.Title.Contains("@issue") || issue.Body.Contains("@issue")) {
