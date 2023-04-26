@@ -1,0 +1,34 @@
+name: Changelog Generator
+on:
+  release:
+    types: [created]
+jobs:
+  generate_changelog:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.0.x'
+    - name: Build and Run Changelog Generator
+      run: |
+        dotnet build
+        dotnet run --project ./changelog-generator/UnityFlow.ChangelogGenerator/UnityFlow.ChangelogGenerator.csproj "${{ github.event.release.tag_name }}" ${{ github.event.repository.owner.login }} ${{ github.event.repository.name }}
+      env:
+        UNITYFLOW_SECRET: ${{ secrets.UNITYFLOW_SECRET }}
+    - name: Commit Changelog
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: 'Update Changelog.md'
+        commit_options: '--no-verify'
+        file_pattern: 'Changelog.md'
+        pull_branch: main
+        commit_user_name: 'GitHub Actions'
+        commit_user_email: 'actions@github.com'
+
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.UNITYFLOW_SECRET }}

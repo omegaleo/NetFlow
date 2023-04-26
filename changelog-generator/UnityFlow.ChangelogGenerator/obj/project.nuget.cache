@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "v6F346E55wVY2eDMmkzmmph/WJ0QCCzXU7o0KPS5ewJ2Exd++RhXtb6BQ40l8CoOln1wQ8zScamU5fQJbRHf3w==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\UnityFlow\\changelog-generator\\UnityFlow.ChangelogGenerator\\UnityFlow.ChangelogGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\OmegaLeo\\.nuget\\packages\\octokit\\5.0.4\\octokit.5.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
