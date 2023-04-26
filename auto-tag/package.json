@@ -1,0 +1,22 @@
+{
+  "name": "unityflow-autotag",
+  "version": "1.0.0",
+  "description": "Auto tagger made for the Unity Flow action",
+  "main": "auto-tag.js",
+  "scripts": {
+    "start": "node auto-tag.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omegaleo/UnityFlow.git"
+  },
+  "author": "Nuno \"Omega Leo\" Diogo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omegaleo/UnityFlow/issues"
+  },
+  "homepage": "https://github.com/omegaleo/UnityFlow#readme",
+  "dependencies": {
+    "@actions/github": "^5.1.1"
+  }
+}
