@@ -7,6 +7,8 @@ const isFeature = /@feature/gi.test(issueBody) || /@feature/gi.test(issueTitle);
 const isBug = /@bug/gi.test(issueBody) || /@bug/gi.test(issueTitle);
 const isEnhancement = /@enhancement/gi.test(issueBody) || /@enhancement/gi.test(issueTitle);
 
+console.log(JSON.stringify(octokit.issues));
+
 if (isFeature) {
   octokit.issues.addLabels({
     owner: context.repo.owner,
