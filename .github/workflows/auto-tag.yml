@@ -18,7 +18,7 @@ jobs:
       run: npm install @octokit/rest
     - name: Auto-tag issue or pull request
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.UNITYFLOW_SECRET }}
       run: |
         const { Octokit } = require('@octokit/rest');
         const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
