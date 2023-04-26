@@ -28,7 +28,7 @@ class Program {
                                      .ToList();
 
         // Generate the changelog
-        var changelog = $"## {release.Name}{Environment.NewLine}";
+        var changelog = $"## $ChangeLog{Environment.NewLine}";
         foreach (var commit in filteredCommits) {
             var commitMessage = commit.Commit.Message.Trim();
             if (Regex.IsMatch(commitMessage, "^(Fix|Implemented|Added|Removed|Changed|Modified)"))
@@ -50,7 +50,9 @@ class Program {
             Body = changelog
         };
         var updatedRelease = await client.Repository.Release.Edit(owner, repo, release.Id, update);
-        
+
+
+        changelog = changelog.Replace("$ChangeLog", releaseTag);
         
         var currentChangelog = File.ReadAllText(changelogFilePath);
 
