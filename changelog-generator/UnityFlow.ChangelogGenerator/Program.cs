@@ -21,14 +21,14 @@ class Program {
         // Get the previous release to compare with
         var previousRelease = await client.Repository.Release.GetAll(owner, repo);
         // var previousReleaseTag = previousRelease.FirstOrDefault()?.TagName;
-        var previousReleaseDate = previousRelease.FirstOrDefault()?.CreatedAt.UtcDateTime ?? DateTime.Parse("2000-01-01 00:00:00");
+        var previousReleaseDate = previousRelease.FirstOrDefault(x => x.Id != release.Id)?.CreatedAt.UtcDateTime ?? DateTime.Parse("2000-01-01 00:00:00");
 
         // Filter the commits to only include those since the last release
         var filteredCommits = commits.Where(commit => commit.Commit.Author.Date >= previousReleaseDate)
                                      .ToList();
 
         // Generate the changelog
-        var changelog = $"## $ChangeLog{Environment.NewLine}";
+        var changelog = $"## ChangeLog{Environment.NewLine}";
         foreach (var commit in filteredCommits) {
             var commitMessage = commit.Commit.Message.Trim();
             if (Regex.IsMatch(commitMessage, "^(Fix|Implemented|Added|Removed|Changed|Modified)"))
@@ -52,7 +52,7 @@ class Program {
         var updatedRelease = await client.Repository.Release.Edit(owner, repo, release.Id, update);
 
 
-        changelog = changelog.Replace("$ChangeLog", releaseTag);
+        changelog = changelog.Replace("## ChangeLog", "## " + releaseTag);
         
         var currentChangelog = File.ReadAllText(changelogFilePath);
 
