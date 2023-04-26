@@ -1,0 +1,55 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Tagging
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  auto-tag:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Dependencies
+      run: npm install @octokit/rest
+    - name: Auto-tag issue or pull request
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        const { Octokit } = require('@octokit/rest');
+        const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+        const issueNumber = context.payload.issue.number;
+        const issueTitle = context.payload.issue.title;
+        const issueBody = context.payload.issue.body;
+        const isFeature = /@feature/gi.test(issueBody) || /@feature/gi.test(issueTitle);
+        const isBug = /@bug/gi.test(issueBody) || /@bug/gi.test(issueTitle);
+        const isEnhancement = /@enhancement/gi.test(issueBody) || /@enhancement/gi.test(issueTitle);
+
+        if (isFeature) {
+          octokit.issues.addLabels({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: issueNumber,
+            labels: ['feature']
+          });
+        }
+        if (isBug) {
+          octokit.issues.addLabels({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: issueNumber,
+            labels: ['bug']
+          });
+        }
+        if (isEnhancement) {
+          octokit.issues.addLabels({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: issueNumber,
+            labels: ['enhancement']
+          });
+        }
