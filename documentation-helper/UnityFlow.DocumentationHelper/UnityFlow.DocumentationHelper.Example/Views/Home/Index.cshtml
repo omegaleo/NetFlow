@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<UnityFlow.DocumentationHelper.Library.Models.DocumentationStructure>
+
+<div class="text-center">
+    @foreach (var doc in @Model)
+    {
+        <h3>@doc.AssemblyName</h3>
+        <h4>@doc.ClassName</h4>
+        @foreach (var desc in doc.Descriptions)
+        {
+            <h5>@desc.Title</h5>
+            <p>@Html.Raw(desc.Description)</p>
+        }
+        <br/>
+    }
+</div>

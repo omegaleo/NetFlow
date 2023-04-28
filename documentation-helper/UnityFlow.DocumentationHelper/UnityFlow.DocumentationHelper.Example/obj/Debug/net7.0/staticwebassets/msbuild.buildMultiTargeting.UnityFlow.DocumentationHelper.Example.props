@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\UnityFlow.DocumentationHelper.Example.props" />
+</Project>

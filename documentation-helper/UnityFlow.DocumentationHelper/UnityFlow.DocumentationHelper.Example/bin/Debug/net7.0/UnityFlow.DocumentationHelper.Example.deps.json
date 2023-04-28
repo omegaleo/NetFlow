@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "UnityFlow.DocumentationHelper.Example/1.0.0": {
+        "dependencies": {
+          "UnityFlow.DocumentationHelper.Library": "1.0.0"
+        },
+        "runtime": {
+          "UnityFlow.DocumentationHelper.Example.dll": {}
+        }
+      },
+      "UnityFlow.DocumentationHelper.Library/1.0.0": {
+        "runtime": {
+          "UnityFlow.DocumentationHelper.Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UnityFlow.DocumentationHelper.Example/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityFlow.DocumentationHelper.Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

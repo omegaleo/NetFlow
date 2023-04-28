@@ -1,0 +1,12 @@
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\bin\Debug\net7.0\UnityFlow.DocumentationHelper.Library.deps.json
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\bin\Debug\net7.0\UnityFlow.DocumentationHelper.Library.dll
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\bin\Debug\net7.0\UnityFlow.DocumentationHelper.Library.pdb
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\obj\Debug\net7.0\UnityFlow.DocumentationHelper.Library.csproj.AssemblyReference.cache
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\obj\Debug\net7.0\UnityFlow.DocumentationHelper.Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\obj\Debug\net7.0\UnityFlow.DocumentationHelper.Library.AssemblyInfoInputs.cache
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\obj\Debug\net7.0\UnityFlow.DocumentationHelper.Library.AssemblyInfo.cs
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\obj\Debug\net7.0\UnityFlow.DocumentationHelper.Library.csproj.CoreCompileInputs.cache
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\obj\Debug\net7.0\UnityFlow.DocumentationHelper.Library.dll
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\obj\Debug\net7.0\refint\UnityFlow.DocumentationHelper.Library.dll
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\obj\Debug\net7.0\UnityFlow.DocumentationHelper.Library.pdb
+D:\Projects\UnityFlow\documentation-helper\UnityFlow.DocumentationHelper\UnityFlow.DocumentationHelper.Library\obj\Debug\net7.0\ref\UnityFlow.DocumentationHelper.Library.dll
