@@ -32,7 +32,7 @@ class Program {
         foreach (var commit in filteredCommits) {
             var commitMessage = commit.Commit.Message.Trim();
             // TODO: read match list from file or config
-            if (Regex.IsMatch(commitMessage, "^(Fix|Implemented|Added|Removed|Change|Modified|Created|Merge)"))
+            if (Regex.IsMatch(commitMessage, "^(Fix|Implemented|Added|Removed|Change|Modified|Created|Merge|Implemented)"))
             {
                 changelog += commitMessage + Environment.NewLine;
             }
