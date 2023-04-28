@@ -31,7 +31,8 @@ class Program {
         var changelog = $"## ChangeLog{Environment.NewLine}";
         foreach (var commit in filteredCommits) {
             var commitMessage = commit.Commit.Message.Trim();
-            if (Regex.IsMatch(commitMessage, "^(Fix|Implemented|Added|Removed|Changed|Modified)"))
+            // TODO: read match list from file or config
+            if (Regex.IsMatch(commitMessage, "^(Fix|Implemented|Added|Removed|Change|Modified|Created)"))
             {
                 changelog += commitMessage + Environment.NewLine;
             }
