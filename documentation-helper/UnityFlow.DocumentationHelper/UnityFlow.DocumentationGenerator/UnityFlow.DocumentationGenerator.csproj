@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\UnityFlow.DocumentationHelper.Library\UnityFlow.DocumentationHelper.Library.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Octokit" Version="5.1.0" />
+    </ItemGroup>
+
+</Project>

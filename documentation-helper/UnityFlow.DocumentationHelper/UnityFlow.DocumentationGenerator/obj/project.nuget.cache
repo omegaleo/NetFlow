@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zkHdSKrANUL1PLsOB+UDY3CiLIJGroJMGDqzoqq6ZVbG59SN5Si1KDDE3tRWXm1VPViMejzVMQRjbmQG6N/8uA==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\UnityFlow\\documentation-helper\\UnityFlow.DocumentationHelper\\UnityFlow.DocumentationGenerator\\UnityFlow.DocumentationGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\OmegaLeo\\.nuget\\packages\\octokit\\5.1.0\\octokit.5.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

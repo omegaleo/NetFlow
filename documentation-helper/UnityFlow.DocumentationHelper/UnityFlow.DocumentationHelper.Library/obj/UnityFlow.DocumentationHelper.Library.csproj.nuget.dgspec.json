@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\Projects\\UnityFlow\\documentation-helper\\UnityFlow.DocumentationHelper\\UnityFlow.DocumentationHelper.Library\\UnityFlow.DocumentationHelper.Library.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "D:\\Projects\\UnityFlow\\documentation-helper\\UnityFlow.DocumentationHelper\\UnityFlow.DocumentationHelper.Library\\UnityFlow.DocumentationHelper.Library.csproj",
         "projectName": "UnityFlow.DocumentationHelper.Library",
