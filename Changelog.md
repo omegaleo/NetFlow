@@ -1,3 +1,11 @@
+## 1.0.1
+Merge branch 'main' of https://github.com/omegaleo/UnityFlow
+Added upload nuget to Release
+
+## 1.0.1
+Merge branch 'main' of https://github.com/omegaleo/UnityFlow
+Added upload nuget to Release
+
 ## 1.0.0
 Merge branch 'main' of https://github.com/omegaleo/UnityFlow
 Changes to the regex in changelog-generator
