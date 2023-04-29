@@ -1,3 +1,7 @@
+## 1.0.2
+Merge branch 'main' of https://github.com/omegaleo/UnityFlow
+Fix for duplicate packages
+
 ## 1.0.1
 Merge branch 'main' of https://github.com/omegaleo/UnityFlow
 Added upload nuget to Release
