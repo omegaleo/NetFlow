@@ -39,4 +39,5 @@ jobs:
         upload_url: ${{ needs.get-release.outputs.upload_url }}
         asset_path: UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
         asset_name: UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
+        asset_content_type: application/zip
       
