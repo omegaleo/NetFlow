@@ -1,3 +1,7 @@
+## 1.0.4
+Merge branch 'main' of https://github.com/omegaleo/UnityFlow
+Changes to workflow
+
 ## 1.0.3
 Merge branch 'main' of https://github.com/omegaleo/UnityFlow
 Fixes for doc workflow
