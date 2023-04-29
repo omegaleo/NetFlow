@@ -28,13 +28,8 @@ jobs:
       run: sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1${{ github.event.release.tag_name }}/" "./documentation-helper/UnityFlow.DocumentationHelper/UnityFlow.DocumentationHelper.Library/UnityFlow.DocumentationHelper.Library.csproj"
     - name: Create Nuget Package
       run: dotnet pack "./documentation-helper/UnityFlow.DocumentationHelper/UnityFlow.DocumentationHelper.Library/UnityFlow.DocumentationHelper.Library.csproj" -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/omegaleo/UnityFlow/releases/tag/${{ github.event.release.tag_name }}"
-    - name: Archive Nuget Package
-      uses: actions/upload-artifact@v1
-      with:
-        name: UnityFlow.DocumentationHelper.Library
-        path: ./documentation-helper/UnityFlow.DocumentationHelper/UnityFlow.DocumentationHelper.Library/bin/Release/UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
     - name: Publish Nuget Package
-      run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json --no-symbols true --skip-duplicate
+      run: dotnet nuget push ./documentation-helper/UnityFlow.DocumentationHelper/UnityFlow.DocumentationHelper.Library/bin/Release/UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json --no-symbols true --skip-duplicate
   upload-release:
     name: Upload nuget files to the release
     runs-on: ubuntu-latest
