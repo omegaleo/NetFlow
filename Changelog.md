@@ -1,3 +1,15 @@
+## 1.0.0
+Merge branch 'main' of https://github.com/omegaleo/UnityFlow
+Changes to the regex in changelog-generator
+Created documentation helper project that will help generate documentation based on the usage of the Documentation Attribute
+Fix for getting the commits
+
+## v1.0.0
+Merge branch 'main' of https://github.com/omegaleo/UnityFlow
+Changes to the regex in changelog-generator
+Created documentation helper project that will help generate documentation based on the usage of the Documentation Attribute
+Fix for getting the commits
+
 ## v1.0.0
 Changes to the regex in changelog-generator
 Merge branch 'main' of https://github.com/omegaleo/UnityFlow
