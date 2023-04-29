@@ -18,6 +18,7 @@ jobs:
       upload_url: ${{ steps.get_release.outputs.upload_url }}
   publish_doc_helper:
     runs-on: ubuntu-latest
+    needs: [get-release]
     steps:
     - uses: actions/checkout@v2
     - name: Setup .Net Core
@@ -29,25 +30,13 @@ jobs:
     - name: Create Nuget Package
       run: dotnet pack "./documentation-helper/UnityFlow.DocumentationHelper/UnityFlow.DocumentationHelper.Library/UnityFlow.DocumentationHelper.Library.csproj" -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/omegaleo/UnityFlow/releases/tag/${{ github.event.release.tag_name }}"
     - name: Publish Nuget Package
-      run: dotnet nuget push ./documentation-helper/UnityFlow.DocumentationHelper/UnityFlow.DocumentationHelper.Library/bin/Release/UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json --no-symbols true --skip-duplicate
-  upload-release:
-    name: Upload nuget files to the release
-    runs-on: ubuntu-latest
-    needs: [get-release, publish_doc_helper]
-    steps:
-      - name: Download Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: Build (${{ matrix.targetPlatform }})
-      - name: Archive Content
-        uses: thedoctor0/zip-release@master
-        with:
-          filename: ./documentation-helper/UnityFlow.DocumentationHelper/UnityFlow.DocumentationHelper.Library/bin/Release/UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
-      - name: Upload assets to release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.ARTIFACT_TOKEN }}
-        with:
-          upload_url: ${{ needs.get-release.outputs.upload_url }}
-          asset_path: UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
-          asset_name: UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
+      run: dotnet nuget push ./documentation-helper/UnityFlow.DocumentationHelper/UnityFlow.DocumentationHelper.Library/bin/Release/UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg --api-key ${{ secrets.nuget_api_key }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+    - name: Upload assets to release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.UNITYFLOW_SECRET }}
+      with:
+        upload_url: ${{ needs.get-release.outputs.upload_url }}
+        asset_path: UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
+        asset_name: UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
+      
