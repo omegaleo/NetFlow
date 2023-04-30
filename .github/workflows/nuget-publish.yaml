@@ -1,4 +1,4 @@
-name: Public Nuget Packages
+name: Publish Nuget Packages
 on:
   release:
     types: [created]
@@ -37,7 +37,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.UNITYFLOW_SECRET }}
       with:
         upload_url: ${{ needs.get-release.outputs.upload_url }}
-        asset_path: UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
+        asset_path: ./documentation-helper/UnityFlow.DocumentationHelper/UnityFlow.DocumentationHelper.Library/bin/Release/UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
         asset_name: UnityFlow.DocumentationHelper.Library.${{ github.event.release.tag_name }}.nupkg
         asset_content_type: application/zip
       
