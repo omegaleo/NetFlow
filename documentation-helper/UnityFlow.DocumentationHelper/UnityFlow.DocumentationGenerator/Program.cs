@@ -6,7 +6,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        var docs = DocumentationHelperTool.GenerateDocumentation();
+        var docs = DocumentationHelperTool.GenerateDocumentation(true);
         
         var client = new GitHubClient(new ProductHeaderValue("unityflow"));
         var tokenAuth = new Credentials(Environment.GetEnvironmentVariable("UNITYFLOW_SECRET"));

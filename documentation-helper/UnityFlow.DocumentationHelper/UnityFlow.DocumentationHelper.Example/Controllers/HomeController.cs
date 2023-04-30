@@ -18,7 +18,7 @@ public class HomeController : Controller
     [Documentation(nameof(Index), "The index of our example", new []{ "" })]
     public async Task<IActionResult> Index()
     {
-        var docs = DocumentationHelperTool.GenerateDocumentation().ToList();
+        var docs = DocumentationHelperTool.GenerateDocumentation(true).ToList();
         return View(docs);
     }
     

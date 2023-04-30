@@ -8,13 +8,13 @@
     ".NETCoreApp,Version=v7.0": {
       "UnityFlow.DocumentationHelper.Example/1.0.0": {
         "dependencies": {
-          "UnityFlow.DocumentationHelper.Library": "1.0.0"
+          "UnityFlow.DocumentationHelper.Library": "1.0.1"
         },
         "runtime": {
           "UnityFlow.DocumentationHelper.Example.dll": {}
         }
       },
-      "UnityFlow.DocumentationHelper.Library/1.0.0": {
+      "UnityFlow.DocumentationHelper.Library/1.0.1": {
         "runtime": {
           "UnityFlow.DocumentationHelper.Library.dll": {}
         }
@@ -27,7 +27,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "UnityFlow.DocumentationHelper.Library/1.0.0": {
+    "UnityFlow.DocumentationHelper.Library/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
