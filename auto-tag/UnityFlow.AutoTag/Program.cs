@@ -14,7 +14,8 @@ class Program {
         var issue = await client.Issue.Get(owner, repo, issueNumber);
         var issueUpdate = new IssueUpdate();
 
-        var filters = JsonConvert.DeserializeObject<List<Filter>>(File.ReadAllText("filters.json"));
+        var filterPath = Path.Join(AppContext.BaseDirectory, "filters.json");
+        var filters = JsonConvert.DeserializeObject<List<Filter>>(File.ReadAllText(filterPath));
 
         foreach (var filter in filters)
         {
