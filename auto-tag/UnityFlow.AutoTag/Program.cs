@@ -36,6 +36,7 @@ class Program {
 
     public static async Task GenerateDocumentation()
     {
+        Console.WriteLine("Generating documentation...");
         var docs = DocumentationHelperTool.GenerateDocumentation();
         
         var client = new GitHubClient(new ProductHeaderValue("unityflow"));
@@ -64,5 +65,6 @@ class Program {
         }
         
         File.WriteAllText(filePath, documentation);
+        Console.WriteLine($"Generated documentation at {filePath}!");
     }
 }
