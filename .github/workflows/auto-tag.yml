@@ -12,7 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.UNITYFLOW_SECRET }}
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
