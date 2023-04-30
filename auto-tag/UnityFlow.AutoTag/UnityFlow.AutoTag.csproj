@@ -10,6 +10,7 @@
     <ItemGroup>
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
       <PackageReference Include="Octokit" Version="5.0.4" />
+      <PackageReference Include="UnityFlow.DocumentationHelper.Library" Version="1.0.4" />
     </ItemGroup>
 
     <ItemGroup>
