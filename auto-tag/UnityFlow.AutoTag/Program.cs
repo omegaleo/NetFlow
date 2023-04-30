@@ -18,7 +18,7 @@ class Program {
 
         foreach (var filter in filters)
         {
-            if (issue.Title.Contains(filter.LookingFor) || issue.Body.Contains(filter.LookingFor)) {
+            if (issue.Title.Contains(filter.LookingFor, StringComparison.OrdinalIgnoreCase) || issue.Body.Contains(filter.LookingFor, StringComparison.OrdinalIgnoreCase)) {
                 issueUpdate.AddLabel(filter.Label);
             }
         }

@@ -28,6 +28,10 @@
     "Label": "feature"
   },
   {
+    "LookingFor": "modify",
+    "Label": "feature"
+  },
+  {
     "LookingFor": "documentation",
     "Label": "documentation"
   }
