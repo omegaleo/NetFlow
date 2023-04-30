@@ -4,11 +4,11 @@ using UnityFlow.AutoTag.Models;
 using UnityFlow.DocumentationHelper.Library.Documentation;
 using UnityFlow.DocumentationHelper.Library.Helpers;
 
-class Program {
+public class Program {
     [Documentation("Main", "This component is in charge of auto-tagging issues by using a filter that's loaded from filters.json and is case insensitive.", new string[]{})]
-    static async Task Main(string[] args)
+    public static async Task Main(string[] args)
     {
-        GenerateDocumentation();
+        await GenerateDocumentation();
         
         var client = new GitHubClient(new ProductHeaderValue("unityflow"));
         var tokenAuth = new Credentials(Environment.GetEnvironmentVariable("UNITYFLOW_SECRET"));
@@ -37,7 +37,7 @@ class Program {
     public static async Task GenerateDocumentation()
     {
         Console.WriteLine("Generating documentation...");
-        var docs = DocumentationHelperTool.GenerateDocumentation();
+        var docs = DocumentationHelperTool.GenerateDocumentation().ToList();
         
         var client = new GitHubClient(new ProductHeaderValue("unityflow"));
         var tokenAuth = new Credentials(Environment.GetEnvironmentVariable("UNITYFLOW_SECRET"));

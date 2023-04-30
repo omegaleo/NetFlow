@@ -15,3 +15,6 @@ D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\refint\UnityFl
 D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.pdb
 D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\UnityFlow.AutoTag.genruntimeconfig.cache
 D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\obj\Debug\net7.0\ref\UnityFlow.AutoTag.dll
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\bin\Debug\net7.0\filters.json
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Projects\UnityFlow\auto-tag\UnityFlow.AutoTag\bin\Debug\net7.0\UnityFlow.DocumentationHelper.Library.dll
