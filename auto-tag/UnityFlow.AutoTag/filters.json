@@ -1,0 +1,34 @@
+[
+  {
+    "LookingFor": "issue",
+    "Label": "bug"
+  },
+  {
+    "LookingFor": "bug",
+    "Label": "bug"
+  },
+  {
+    "LookingFor": "fix",
+    "Label": "bug"
+  },
+  {
+    "LookingFor": "feature",
+    "Label": "feature"
+  },
+  {
+    "LookingFor": "enhancement",
+    "Label": "feature"
+  },
+  {
+    "LookingFor": "add",
+    "Label": "feature"
+  },
+  {
+    "LookingFor": "change",
+    "Label": "feature"
+  },
+  {
+    "LookingFor": "documentation",
+    "Label": "documentation"
+  }
+]

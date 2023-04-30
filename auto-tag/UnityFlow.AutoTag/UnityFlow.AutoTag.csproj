@@ -8,7 +8,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
       <PackageReference Include="Octokit" Version="5.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="filters.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

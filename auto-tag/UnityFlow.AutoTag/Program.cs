@@ -1,4 +1,6 @@
-﻿using Octokit;
+﻿using Newtonsoft.Json;
+using Octokit;
+using UnityFlow.AutoTag.Models;
 
 class Program {
     static async Task Main(string[] args) {
@@ -12,16 +14,13 @@ class Program {
         var issue = await client.Issue.Get(owner, repo, issueNumber);
         var issueUpdate = new IssueUpdate();
 
-        if (issue.Title.Contains("@issue") || issue.Body.Contains("@issue")) {
-            issueUpdate.AddLabel("issue");
-        }
+        var filters = JsonConvert.DeserializeObject<List<Filter>>(File.ReadAllText("filters.json"));
 
-        if (issue.Title.Contains("@feature") || issue.Body.Contains("@feature")) {
-            issueUpdate.AddLabel("feature");
-        }
-
-        if (issue.Title.Contains("@enhancement") || issue.Body.Contains("@enhancement")) {
-            issueUpdate.AddLabel("enhancement");
+        foreach (var filter in filters)
+        {
+            if (issue.Title.Contains(filter.LookingFor) || issue.Body.Contains(filter.LookingFor)) {
+                issueUpdate.AddLabel(filter.Label);
+            }
         }
 
         var updatedIssue = await client.Issue.Update(owner, repo, issueNumber, issueUpdate);
