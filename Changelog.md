@@ -1,3 +1,16 @@
+## 1.1.0
+Merge branch 'main' of https://github.com/omegaleo/UnityFlow
+Fix for auto-tag workflow
+Changes to workflow for auto-tag
+Added documentation lib to auto-tag
+Fix for loading from file
+Added culture invariant
+Changes for #3 in auto-tag
+Removed docs folder as it won't be needed
+Removed website folder as it won't be needed
+Added documentation generator
+Fix for doc workflow
+
 ## 1.0.4
 Merge branch 'main' of https://github.com/omegaleo/UnityFlow  
 Changes to workflow  
