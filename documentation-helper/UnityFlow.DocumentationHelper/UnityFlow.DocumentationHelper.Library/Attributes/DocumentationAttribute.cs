@@ -7,9 +7,9 @@ namespace UnityFlow.DocumentationHelper.Library.Attributes
     {
         public string Title;
         public string Description;
-        public string[] Args;
+        public string[]? Args;
 
-        public DocumentationAttribute(string title, string description, string[] args)
+        public DocumentationAttribute(string title, string description, string[]? args = null)
         {
             Title = title;
             Description = description;
