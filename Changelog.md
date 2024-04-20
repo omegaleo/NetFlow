@@ -1,3 +1,9 @@
+## 1.1.1
+Merge remote-tracking branch 'origin/main'
+Merge branch 'main' of https://github.com/omegaleo/UnityFlow
+Fix for auto-tag documentation generator
+Fix for nuget-publish.yaml
+
 ## 1.1.0
 Merge branch 'main' of https://github.com/omegaleo/UnityFlow
 Fix for auto-tag workflow
