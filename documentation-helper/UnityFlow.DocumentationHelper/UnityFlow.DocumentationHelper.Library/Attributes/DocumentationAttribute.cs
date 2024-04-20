@@ -1,16 +1,19 @@
-﻿namespace UnityFlow.DocumentationHelper.Library.Documentation;
+﻿using System;
 
-[System.AttributeUsage(AttributeTargets.All, AllowMultiple=false)]
-public class DocumentationAttribute: Attribute
+namespace UnityFlow.DocumentationHelper.Library.Attributes
 {
-    public string Title;
-    public string Description;
-    public string[] Args;
-
-    public DocumentationAttribute(string title, string description, string[] args)
+    [System.AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
+    public class DocumentationAttribute : Attribute
     {
-        Title = title;
-        Description = description;
-        Args = args;
+        public string Title;
+        public string Description;
+        public string[] Args;
+
+        public DocumentationAttribute(string title, string description, string[] args)
+        {
+            Title = title;
+            Description = description;
+            Args = args;
+        }
     }
 }

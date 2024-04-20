@@ -1,7 +1,11 @@
-namespace UnityFlow.DocumentationHelper.Library.Models;
+using System;
+using System.Collections.Generic;
 
-public class DocumentationAssembly
+namespace UnityFlow.DocumentationHelper.Library.Models
 {
-    public string AssemblyName;
-    public IEnumerable<Type> Types;
+    public class DocumentationAssembly
+    {
+        public string AssemblyName;
+        public IEnumerable<Type> Types;
+    }
 }

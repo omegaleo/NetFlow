@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using UnityFlow.DocumentationHelper.Example.Models;
-using UnityFlow.DocumentationHelper.Library.Documentation;
+using UnityFlow.DocumentationHelper.Library.Attributes;
 using UnityFlow.DocumentationHelper.Library.Helpers;
 
 namespace UnityFlow.DocumentationHelper.Example.Controllers;

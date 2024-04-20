@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnityFlow.DocumentationGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca1c89e1eb4ead5ffd3379a733c560ed2fcffce4")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnityFlow.DocumentationGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnityFlow.DocumentationGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

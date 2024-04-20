@@ -1,32 +1,36 @@
-namespace UnityFlow.DocumentationHelper.Library.Models;
+using System.Collections.Generic;
 
-public class DocumentationStructure
+namespace UnityFlow.DocumentationHelper.Library.Models
 {
-    public string AssemblyName;
-    public string ClassName;
-    public List<DocumentationDescription> Descriptions;
 
-    public DocumentationStructure(string assemblyName, string className)
+    public class DocumentationStructure
     {
-        AssemblyName = assemblyName;
-        ClassName = className;
-        Descriptions = new List<DocumentationDescription>();
+        public string AssemblyName;
+        public string ClassName;
+        public List<DocumentationDescription> Descriptions;
+
+        public DocumentationStructure(string assemblyName, string className)
+        {
+            AssemblyName = assemblyName;
+            ClassName = className;
+            Descriptions = new List<DocumentationDescription>();
+        }
+
+        public void AddDescription(DocumentationDescription description)
+        {
+            Descriptions.Add(description);
+        }
     }
 
-    public void AddDescription(DocumentationDescription description)
+    public class DocumentationDescription
     {
-        Descriptions.Add(description);
-    }
-}
+        public string Title;
+        public string Description;
 
-public class DocumentationDescription
-{
-    public string Title;
-    public string Description;
-
-    public DocumentationDescription(string title, string description, string[] args)
-    {
-        Title = title;
-        Description = string.Format(description, args);
+        public DocumentationDescription(string title, string description, string[] args)
+        {
+            Title = title;
+            Description = string.Format(description, args);
+        }
     }
 }
