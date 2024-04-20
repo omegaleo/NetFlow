@@ -1,3 +1,7 @@
+## 1.1.2
+Merge remote-tracking branch 'origin/main'
+Fix for non nullable arguments in DocumentationAttribute.cs
+
 ## 1.1.1
 Merge remote-tracking branch 'origin/main'
 Merge branch 'main' of https://github.com/omegaleo/UnityFlow
