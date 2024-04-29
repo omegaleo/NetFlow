@@ -1,2 +1,2 @@
-# UnityFlow
-Automated Workflow for Unity Projects
+# NetFlow
+Automated Workflow for any dotnet projec
