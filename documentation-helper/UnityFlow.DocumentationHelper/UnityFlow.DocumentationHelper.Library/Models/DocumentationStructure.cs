@@ -26,11 +26,13 @@ namespace UnityFlow.DocumentationHelper.Library.Models
     {
         public string Title;
         public string Description;
+        public string CodeExample = string.Empty;
 
-        public DocumentationDescription(string title, string description, string[]? args)
+        public DocumentationDescription(string title, string description, string[]? args, string codeExample)
         {
             Title = title;
             Description = string.Format(description, args);
+            CodeExample = codeExample;
         }
     }
 }

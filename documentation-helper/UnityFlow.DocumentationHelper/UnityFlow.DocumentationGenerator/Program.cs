@@ -30,6 +30,7 @@ class Program
             {
                 documentation += $"### {desc.Title}{Environment.NewLine}  ";
                 documentation += $"{desc.Description}{Environment.NewLine}  ";
+                documentation += $"#### Example:{Environment.NewLine} {desc.CodeExample}";
             }
         }
         
